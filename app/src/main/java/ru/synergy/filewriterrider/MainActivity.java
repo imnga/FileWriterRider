@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     public void  saveText(View view){
         FileOutputStream fos = null;
         try {
-        EditText textBox =(EditText) view.findViewById(R.id.editor);
+        EditText textBox =(EditText) findViewById(R.id.editor);
         String text = textBox.getText().toString();
         fos = openFileOutput(FINAL_NAME,MODE_PRIVATE);
         fos.write(text.getBytes());
